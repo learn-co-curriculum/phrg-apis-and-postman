@@ -97,7 +97,7 @@ browser:
 If you put in your client ID and secret, you should see some JSON that
 looks like this:
 
-```json
+```javascript
 response: {
   venue: {
     id: "40a55d80f964a52020f31ee3",
@@ -135,6 +135,7 @@ make it much easier to deal with parameters, headers, and anything else
 we might need to do to explore an API.
 
 Open postman, then enter the base URL in the URL field: `https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3`. Then click `Params`, and you can enter each parameter separately below. Enter the following three things in the appropriate columns:
+
 ```
 URL Parameter Key        Value
 client_id               YOUR CLIENT ID
