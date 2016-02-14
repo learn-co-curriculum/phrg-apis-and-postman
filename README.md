@@ -149,8 +149,7 @@ get the same JSON result as we did in the browser.
 ### API Versioning
 
 The `v` parameter we passed in was a version parameter that the
-Foursquare API requires. Try taking it out by deleting the `v` and the
-value from Postman and hitting "Send" again.
+Foursquare API requires. Try taking it out by deleting the `v` parameter and value from Postman and hitting "Send" again.
 
 You should see an error about the API requiring a version parameter. You
 can read the included [link](https://developer.foursquare.com/overview/versioning) to learn more.
