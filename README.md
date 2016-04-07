@@ -9,7 +9,7 @@
 
 ## Lesson
 
-We're going to explore the Foursqpare API and learn how to read API
+We're going to explore the Foursquare API and learn how to read API
 documentation.
 
 ### Tools
@@ -186,3 +186,5 @@ versioning.
 
 Spend some time poking around the Foursquare API documentation and use
 Postman to try out the various endpoints.
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/apis-and-postman'>APIs And Postman</a> on Learn.co and start learning to code for free.</p>
