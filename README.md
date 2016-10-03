@@ -1,4 +1,4 @@
-# Exploring APIs With Postman
+# APIs and Postman
 
 ## Objectives
 
@@ -63,7 +63,7 @@ Once you've created your app, you should see your Client ID and Client Secret on
 
 Now that we have them, we can try that request again with our app credentials. Enter the URL with your client id and secret into your browser:
 
-`https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET&v=20150201`
+`https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3?client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET&v=20160201&m=foursquare`
 
 If you put in your client ID and secret, you should see some JSON that looks like this:
 
@@ -97,18 +97,18 @@ response: {
 
 **Note:** Remember that with a `GET` request, we pass parameters via a *querystring* by putting a `?` after the url and then formatting parameters like this: `param=value&param2=value`.
 
-Typing all that into the URL bar of our browser every time is tedious, and makes it easy to make a mistake, so we can use Postman, which willmake it much easier to deal with parameters, headers, and anything else we might need to do to explore an API.
+Typing all that into the URL bar of our browser every time is tedious and makes it easy to make a mistake, so we can use Postman, which will make it much easier to deal with parameters, headers, and anything else we might need to do to explore an API.
 
 Open postman, then enter the base URL in the URL field: `https://api.foursquare.com/v2/venues/40a55d80f964a52020f31ee3`. Then click `Params`, and you can enter each parameter separately below. Enter the following three things in the appropriate columns:
 
-```
-URL Parameter Key        Value
-client_id               YOUR CLIENT ID
-client_secret           YOUR SECRET
-v                       20160201
-```
+| URL Parameter Key |     Value      |
+|-------------------|----------------|
+| client_id         | YOUR CLIENT ID |
+| client_secret     | YOUR SECRET    |
+| v                 | 20160201       |
+| m                 | foursquare     |
 
-We'll talk about what `v` does in a minute. Hit "Send", and you should get the same JSON result as we did in the browser. 
+We'll talk about what `v` and `m` do in a minute. Hit "Send", and you should get the same JSON result that we did in the browser. 
 
 ### API Versioning
 
@@ -116,13 +116,15 @@ The `v` parameter we passed in was a version parameter that the Foursquare API r
 
 You should see an error about the API requiring a version parameter. You can read the included [link](https://developer.foursquare.com/overview/versioning) to learn more.
 
+Similarly, the `m` parameter indicates which style of response we want back from the server — Foursquare or Swarm. Both apps are accessible via the same API, so it's important to choose.
+
 So what is versioning?
 
 Versioning is an important tool in API use. When an API changes, either because of new features or changed endpoints, not all API clients will be able to keep up with those changes immediately. If you just changed the API and released it, any application using the API would run the risk of being broken until they updated their code.
 
 This is akin to the problem we discovered with screen scraping when the website changes.
 
-By versioning the API, you can guarantee that anyone using the current version can keep using it, and upgrade to the new version when they can. You leave the old endpoints in place (e.g. `https://api.foursquare.com/v1/venues`) and roll out a new one under a new version namespace (e.g. `https://api.foursquare.com/v2/venues`). This way everyone on `v1` can keep working, and the API provider doesn't break every application that uses the site.
+By versioning the API, you can guarantee that anyone using the current version can keep using it and upgrade to the new version when they are able to. You leave the old endpoints in place (e.g. `https://api.foursquare.com/v1/venues`) and roll out a new one under a new version namespace (e.g. `https://api.foursquare.com/v2/venues`). This way everyone on `v1` can keep working, and the API provider doesn't break every application that uses the site.
 
 In Foursquare's case, they require the `v` parameter as a way of you saying "I am prepared for code as of this date". This versioning parameter becomes a form of contract between the API provider and consumer.
 
@@ -132,4 +134,4 @@ We've looked at consuming an API with Postman, using an application Client ID/Se
 
 Spend some time poking around the Foursquare API documentation and use Postman to try out the various endpoints.
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/apis-and-postman'>APIs And Postman</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/apis-and-postman'>APIs and Postman</a> on Learn.co and start learning to code for free.</p>
