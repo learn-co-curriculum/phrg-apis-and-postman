@@ -2,9 +2,9 @@
 
 ## Objectives
 
-  1. Use Postman to explore an API
-  2. Read API documentation
-  3. Understand the value of and how to use Client IDs and Secrets
+1. Use Postman to explore an API
+2. Read API documentation
+3. Understand the value of and how to use Client IDs and Secrets
 
 
 ## Lesson
@@ -51,7 +51,7 @@ Okay, but why can't we just log in to Foursquare with our normal account and use
 
 While there are some functions in an API that may require an individual user to be authenticated, the client ID/secret pair authorizes the *application* access the API. You wouldn't want to embed your personal account information in the application, allowing users to perform actions as if they were you, would you?
 
-This client ID/secret pair isn't actually a "login". It's just a way of securely identifying and allow an application to make requests.
+This client ID/secret pair isn't actually a "login". It's just a way of securely identifying and allowing an application to make requests.
 
 Let's follow the instructions to [create a Foursquare app](https://foursquare.com/developers/apps) so that we can get a client ID and secret, then.
 
