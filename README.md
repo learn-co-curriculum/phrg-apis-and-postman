@@ -134,4 +134,4 @@ We've looked at consuming an API with Postman, using an application Client ID/Se
 
 Spend some time poking around the Foursquare API documentation and use Postman to try out the various endpoints.
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/apis-and-postman'>APIs and Postman</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>PHRG APIs and Postman</p>
